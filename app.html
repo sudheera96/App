@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Maitre D |Calculator</title>
+    <link rel="stylesheet" href="app.css">
+   
+</head>
+
+<body>
+    <header>
+        <h2>Maitre D</h2>
+    </header>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <label for=" Total">Total: $</label>
+                <input type="number" id="total" onchange="calculateTax(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Tip">Tip: $</label>
+                <span id="tip">---</span>
+            </td>
+            <td>
+                <label for=" Total">Rate: $</label>
+                <input type="number" id="rate" onchange="calculateTip(this.value)">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Tax">Tax: $</label>
+                <span id="tax">---</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Grand Total">Grand Total: $</label>
+                <span id="grandTotal"></span>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <div style="text-align:center">
+        <button onclick="calculateGrandtotal()">Calculate</button>
+    </div>
+    <script src="app.js"></script>
+
+    <footer></footer>
+</body>
